@@ -1,6 +1,7 @@
-
 export default function Home() {
-  <div>Inicio</div>
-
-
+  return (
+    <div style={{ backgroundColor: 'black', color: 'white', padding: '50px', fontSize: '30px' }}>
+      TESTE - INÍCIO APARECEU
+    </div>
+  );
 }
