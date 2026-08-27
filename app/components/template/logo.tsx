@@ -6,7 +6,8 @@ export default function Logo(){
    return (
     <Link href ="/">
         <div>
-            <IconBrandAmazon></IconBrandAmazon>
+            <div>A Z</div>
+            
         </div>
     </Link>
    )
