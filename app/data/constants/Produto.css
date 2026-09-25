@@ -1,0 +1,91 @@
+.pagina-produtos {
+  background-color: #121214;
+  min-height: 100vh;
+  padding: 24px;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.titulo-secao {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+/* Força uma grelha onde cada card tem no máximo 220px de largura */
+.grid-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 220px)) !important;
+  gap: 16px;
+  justify-content: start;
+}
+
+/* Reduz o tamanho físico e restringe o card */
+.card-produto {
+  background-color: #202024 !important;
+  border: 1px solid #29292e !important;
+  border-radius: 8px !important;
+  padding: 10px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  max-width: 220px !important; /* Força a largura máxima menor */
+  height: auto !important;
+}
+
+.card-produto:hover {
+  border-color: #7c3aed !important;
+}
+
+/* Imagem bem mais pequena */
+.imagem-produto {
+  width: 100% !important;
+  height: 100px !important; /* Altura reduzida para a imagem */
+  object-fit: cover !important;
+  border-radius: 4px !important;
+  margin-bottom: 8px !important;
+}
+
+.conteudo-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.nome-produto {
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  margin: 0 0 4px 0 !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.descricao-produto {
+  font-size: 0.7rem !important;
+  color: #a8a8b3 !important;
+  margin: 0 0 8px 0 !important;
+  display: -webkit-box;
+  
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.rodape-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.preco-produto {
+  color: #00b37e !important;
+  font-weight: bold;
+  font-size: 0.85rem !important;
+}
+
+.estoque-produto {
+  font-size: 0.65rem !important;
+  color: #7c7c8a !important;
+}

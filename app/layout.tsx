@@ -1,29 +1,31 @@
+// app/layout.tsx
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import { ProvedorCarrinho } from "./data/contexts/ContextoCarrinho";
+import ProvedorSessao from "@/app/components/template/ProvedorSessao";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Meu E-commerce",
-  description: "Ecommerce feito com next.js 13, TypeScript, TailwindCSS e React",
+  title: "E-commerce Next.js",
+  description: "Aplicação e-commerce desenvolvida com Next.js",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="pt">
+      <body className={`${inter.className} bg-zinc-950 text-white min-h-screen`}>
+        <ProvedorSessao>
+          <ProvedorCarrinho>
+            {children}
+          </ProvedorCarrinho>
+        </ProvedorSessao>
+      </body>
     </html>
   );
 }
